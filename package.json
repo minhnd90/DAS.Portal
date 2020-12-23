@@ -23,7 +23,7 @@
     "css-minify:pages": "npm run css-minify-bash -- dist/css/alt/portal.pages.min.css dist/css/alt/portal.pages.css",
     "css-minify:plugins": "npm run css-minify-bash -- dist/css/alt/portal.plugins.min.css dist/css/alt/portal.plugins.css",
     "css-lint": "stylelint \"build/scss/**/*.scss\" --cache --cache-location .cache/.stylelintcache",
-    "compile": "npm-run-all --parallel js css-all",
+    "compile": "npm-run-all --parallel js css",
     "dev": "npm-run-all --parallel watch sync",
     "docs": "npm-run-all --sequential docs-prepare docs-compile",
     "docs-lint": "node build/npm/vnu-jar.js",
