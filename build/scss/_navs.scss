@@ -92,6 +92,7 @@
   @if $color != dark and $color != light {
     .navbar-#{$color} {
       background-color: $value;
+      border-color: $value;
     }
   }
 }
@@ -99,6 +100,7 @@
 @each $color, $value in $colors {
   .navbar-#{$color} {
     background-color: $value;
+    border-color: $value;
   }
 }
 
