@@ -5,21 +5,21 @@ const { babel } = require('@rollup/plugin-babel')
 const pkg = require('../../package')
 const year = new Date().getFullYear()
 const banner = `/*!
- * AdminLTE v${pkg.version} (${pkg.homepage})
+ * DAS Portal v${pkg.version} (${pkg.homepage})
  * Copyright 2014-${year} ${pkg.author}
- * Licensed under MIT (https://github.com/ColorlibHQ/AdminLTE/blob/master/LICENSE)
+ * License: Open source - MIT <https://opensource.org/licenses/MIT>
  */`
 
 module.exports = {
-  input: 'build/js/AdminLTE.js',
+  input: 'build/js/_Portal.js',
   output: {
     banner,
-    file: 'dist/js/adminlte.js',
+    file: 'dist/js/portal.js',
     format: 'umd',
     globals: {
       jquery: 'jQuery'
     },
-    name: 'adminlte'
+    name: 'portal'
   },
   external: ['jquery'],
   plugins: [

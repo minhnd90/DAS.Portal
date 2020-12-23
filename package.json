@@ -33,7 +33,7 @@
     "postinstall": "npm run plugins",
     "js": "npm-run-all --sequential js-compile js-minify",
     "js-compile": "rollup --config build/config/rollup.config.js --sourcemap",
-    "js-minify": "terser --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/js/das.js.map,includeSources,url=das.min.js.map\" --output dist/js/das.min.js dist/js/das.js",
+    "js-minify": "terser --compress typeofs=false --mangle --comments \"/^!/\" --source-map \"content=dist/js/portal.js.map,includeSources,url=portal.min.js.map\" --output dist/js/portal.min.js dist/js/portal.js",
     "js-lint": "eslint --cache --cache-location .cache/.eslintcache --report-unused-disable-directives .",
     "lint": "npm-run-all --continue-on-error --parallel css-lint js-lint",
     "production": "npm-run-all --sequential compile plugins",
@@ -51,8 +51,8 @@
     "responsive"
   ],
   "homepage": "",
-  "style": "dist/css/das.css",
-  "sass": "build/scss/das.scss",
+  "style": "dist/css/portal.css",
+  "sass": "build/scss/portal.scss",
   "repository": {
     "type": "git",
     "url": ""
