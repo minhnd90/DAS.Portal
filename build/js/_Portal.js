@@ -31,3 +31,6 @@ export {
   TodoList,
   Treeview
 }
+
+import './ScrollingTabs'
+import './AlsoResizeReverse'
