@@ -603,8 +603,9 @@ body:not(.layout-fixed) {
 }
 
 .content-header {
-	background: url(../img/header-background.jpg) no-repeat;
+	height: 75vh;
 	padding: $content-padding-y $content-padding-x;
+	position: relative;
 
 	.text-sm & {
 		padding: 10px $content-padding-x;
@@ -628,6 +629,16 @@ body:not(.layout-fixed) {
 		.text-sm & {
 			line-height: 1.5rem;
 		}
+	}
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: url(../img/header-background.jpg) no-repeat center center fixed;
+		background-size: cover;
+		filter: brightness(50%);
 	}
 }
 

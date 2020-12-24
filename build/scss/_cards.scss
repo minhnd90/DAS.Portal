@@ -378,7 +378,7 @@ html.maximized-card {
 
   // Todo list element
   > li {
-    @include border-radius(2px);
+    @include border-radius($border-radius);
     background-color: $gray-100;
     border-left: 2px solid $gray-200;
     color: $gray-700;

@@ -41,7 +41,7 @@ $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #e83e8c !default;
 $red: #dc3545 !default;
-$orange: #fd7e14 !default;
+$orange: #f3701d !default;
 $yellow: #ffc107 !default;
 $green: #28a745 !default;
 $teal: #20c997 !default;
@@ -194,7 +194,8 @@ $grid-breakpoints: (
 	sm: 576px,
 	md: 768px,
 	lg: 992px,
-	xl: 1200px
+	xl: 1200px,
+	xxl: 1600px
 ) !default;
 
 @include _assert-ascending($grid-breakpoints, '$grid-breakpoints');
@@ -208,7 +209,8 @@ $container-max-widths: (
 	sm: 540px,
 	md: 720px,
 	lg: 960px,
-	xl: 1140px
+	xl: 1140px,
+	xxl: 1580px
 ) !default;
 
 @include _assert-ascending($container-max-widths, '$container-max-widths');
@@ -230,9 +232,9 @@ $line-height-sm: 1.5 !default;
 $border-width: 1px !default;
 $border-color: $gray-300 !default;
 
-$border-radius: 0.25rem !default;
-$border-radius-lg: 0.3rem !default;
-$border-radius-sm: 0.2rem !default;
+$border-radius: 0 !default; //.25rem
+$border-radius-lg: 0 !default; //0.3rem
+$border-radius-sm: 0 !default; //0.2rem
 
 $component-active-color: $white !default;
 $component-active-bg: theme-color('primary') !default;
@@ -589,7 +591,7 @@ $zindex-tooltip: 1070 !default;
 
 // Navs
 
-$nav-link-padding-y: 0.5rem !default;
+$nav-link-padding-y: 1rem !default; //0.5rem
 $nav-link-padding-x: 1rem !default;
 $nav-link-disabled-color: $gray-600 !default;
 
@@ -607,10 +609,10 @@ $nav-pills-link-active-bg: $component-active-bg !default;
 
 // Navbar
 
-$navbar-padding-y: ($spacer / 2) !default;
+$navbar-padding-y: 0 !default; //($spacer / 2)
 $navbar-padding-x: ($spacer / 2) !default;
 
-$navbar-nav-link-padding-x: 1rem !default;
+$navbar-nav-link-padding-x: 0 !default; //1rem
 
 $navbar-brand-font-size: $font-size-base !default;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
@@ -618,8 +620,8 @@ $nav-link-height: ($font-size-base * $line-height-base + $nav-link-padding-y * 2
 $navbar-brand-height: $navbar-brand-font-size * $line-height-base !default;
 $navbar-brand-padding-y: ($nav-link-height - $navbar-brand-height) / 2 !default;
 
-$navbar-toggler-padding-y: 0.25rem !default;
-$navbar-toggler-padding-x: 0.75rem !default;
+$navbar-toggler-padding-y: $nav-link-padding-y !default; //0.25rem
+$navbar-toggler-padding-x: $nav-link-padding-x !default; //0.75rem
 $navbar-toggler-font-size: $font-size-lg !default;
 $navbar-toggler-border-radius: $btn-border-radius !default;
 
