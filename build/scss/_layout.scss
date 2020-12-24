@@ -603,7 +603,7 @@ body:not(.layout-fixed) {
 }
 
 .content-header {
-	height: 75vh;
+	height: calc(100vh - #{$main-header-height} - #{$main-footer-height});
 	padding: $content-padding-y $content-padding-x;
 	position: relative;
 
@@ -636,9 +636,9 @@ body:not(.layout-fixed) {
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: url(../img/header-background.jpg) no-repeat center center fixed;
-		background-size: cover;
-		filter: brightness(50%);
+		//background: url(../img/header-background.jpg) no-repeat center center fixed;
+		//background-size: cover;
+		//filter: brightness(50%);
 	}
 }
 

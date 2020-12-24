@@ -69,7 +69,8 @@
 		left: 0;
 		bottom: 0;
 		width: 0;
-		background-color: rgba($white, 0.1);
+        background-color: rgba($white, 0.1);
+        border-radius: inherit;
 		@include transition(all $transition-speed $transition-fn);
 	}
 	&:hover {

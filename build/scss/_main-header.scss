@@ -11,22 +11,6 @@
 		position: relative;
 		outline: none;
 		@include transition(all $transition-speed $transition-fn);
-
-		&::after {
-			content: '';
-			width: 0;
-			height: 6px;
-			position: absolute;
-			left: 50%;
-			bottom: 0;
-			background-color: $orange;
-			@include transition(all $transition-speed $transition-fn);
-		}
-		&:hover::after {
-			width: 100%;
-			left: 0;
-			right: 0;
-		}
 	}
 
 	.text-sm &,
