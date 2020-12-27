@@ -606,6 +606,11 @@ body:not(.layout-fixed) {
 	height: calc(100vh - #{$main-header-height} - #{$main-footer-height});
 	padding: $content-padding-y $content-padding-x;
 	position: relative;
+	@include transition(height $transition-speed $transition-fn);
+
+	&.result {
+		height: auto;
+	}
 
 	.text-sm & {
 		padding: 10px $content-padding-x;

@@ -360,7 +360,7 @@ $input-btn-padding-y-lg: 1rem !default; //0.5rem
 $input-btn-padding-x-lg: 1.25rem !default; //1rem
 $input-btn-line-height-lg: $line-height-lg !default;
 
-$input-btn-border-width: 0px !default; //$border-width
+$input-btn-border-width: $border-width !default;
 
 // Buttons
 //
