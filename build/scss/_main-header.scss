@@ -34,7 +34,7 @@
 
 	.navbar-nav {
 		.nav-item {
-			margin: 0 $nav-link-padding-x;
+			padding: 0 $nav-link-padding-x;
 		}
 
 		&[class*='-right'] {
@@ -179,4 +179,8 @@
 	.input-group {
 		width: 100%;
 	}
+}
+.user-image {
+	width: 2.5rem;
+    height: auto;
 }

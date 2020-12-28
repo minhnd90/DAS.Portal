@@ -606,7 +606,6 @@ body:not(.layout-fixed) {
 	height: calc(100vh - #{$main-header-height} - #{$main-footer-height});
 	padding: $content-padding-y $content-padding-x;
 	position: relative;
-	@include transition(height $transition-speed $transition-fn);
 
 	&.result {
 		height: auto;
@@ -641,9 +640,7 @@ body:not(.layout-fixed) {
 		left: 0;
 		right: 0;
 		bottom: 0;
-		//background: url(../img/header-background.jpg) no-repeat center center fixed;
-		//background-size: cover;
-		//filter: brightness(50%);
+		box-shadow: inset 0 -3px 6px rgba($black, 0.23);
 	}
 }
 
