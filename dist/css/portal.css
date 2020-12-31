@@ -24328,12 +24328,12 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   background-color: #6c757d;
 }
 
-.login-logo,
-.register-logo {
-  font-size: 2.1rem;
-  font-weight: 300;
-  margin-bottom: .9rem;
-  text-align: center;
+.login-logo img,
+.login-logo svg,
+.register-logo img,
+.register-logo svg {
+  width: 4rem;
+  height: auto;
 }
 
 .login-logo a,

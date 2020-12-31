@@ -4,10 +4,11 @@
 
 .login-logo,
 .register-logo {
-  font-size: 2.1rem;
-  font-weight: 300;
-  margin-bottom: .9rem;
-  text-align: center;
+  img,
+  svg {
+    width: 4rem;
+    height: auto;
+  }
 
   a {
     color: $gray-700;
