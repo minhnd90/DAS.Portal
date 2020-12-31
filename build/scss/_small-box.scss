@@ -3,163 +3,90 @@
 //
 
 .small-box {
-  @include border-radius($border-radius);
-  @include box-shadow($card-shadow);
+	@include border-radius($border-radius);
+	@include box-shadow($card-shadow);
 
-  display: block;
-  margin-bottom: 20px;
-  position: relative;
+	display: block;
+	margin-bottom: 1rem;
+	position: relative;
+	transition: box-shadow $transition-speed linear;
 
-  // content wrapper
-  > .inner {
-    padding: 10px;
-  }
+	// content wrapper
+	> .inner {
+		padding: 1rem;
+	}
 
-  > .small-box-footer {
-    background-color: rgba($black, .1);
-    color: rgba($white, .8);
-    display: block;
-    padding: 3px 0;
-    position: relative;
-    text-align: center;
-    text-decoration: none;
-    z-index: 10;
+	> .small-box-footer {
+		background-color: rgba($black, 0.1);
+		color: rgba($white, 0.8);
+		display: block;
+		padding: 0.25rem 0;
+		position: relative;
+		text-align: center;
+		text-decoration: none;
+		z-index: 10;
 
-    &:hover {
-      background-color: rgba($black, .15);
-      color: $white;
-    }
-  }
+		&:hover {
+			background-color: rgba($black, 0.15);
+			color: $white;
+		}
+	}
 
-  h3 {
-    @include font-size(2.2rem);
-    font-weight: 700;
-    margin: 0 0 10px;
-    padding: 0;
-    white-space: nowrap;
-  }
+	h3 {
+		font-size: 1rem;
+		font-weight: 700;
+		margin-bottom: 1rem;
+		@include text-truncate();
+	}
 
-  @include media-breakpoint-up(lg) {
-    .col-xl-2 &,
-    .col-lg-2 &,
-    .col-md-2 & {
-      h3 {
-        @include font-size(1.6rem);
-      }
-    }
+	p {
+		font-size: 1rem;
 
-    .col-xl-3 &,
-    .col-lg-3 &,
-    .col-md-3 & {
-      h3 {
-        @include font-size(1.6rem);
-      }
-    }
-  }
+		> small {
+			color: $gray-100;
+			display: block;
+			font-size: 0.875rem;
+			margin-top: 0.5rem;
+		}
+	}
 
-  @include media-breakpoint-up(xl) {
-    .col-xl-2 &,
-    .col-lg-2 &,
-    .col-md-2 & {
-      h3 {
-        @include font-size(2.2rem);
-      }
-    }
+	h3,
+	p {
+		position: relative;
+		z-index: 5;
+		text-shadow: -1px -1px 0 rgba($white, 0.5), -1px 1px 0 rgba($white, 0.5), 1px -1px 0 rgba($white, 0.5), 1px 1px 0 rgba($white, 0.5);
+	}
+	.stretched-link::after {
+		z-index: 6;
+	}
 
-    .col-xl-3 &,
-    .col-lg-3 &,
-    .col-md-3 & {
-      h3 {
-        @include font-size(2.2rem);
-      }
-    }
-  }
+	// the icon
+	.icon {
+		color: rgba($black, 0.15);
+		z-index: 0;
 
-  p {
-    font-size: 1rem;
+		> i,
+		> svg {
+			font-size: 5rem;
+			position: absolute;
+			right: 1rem;
+			top: 1rem;
+			opacity: 0.5;
+			transition: opacity $transition-speed linear;
+		}
+	}
 
-    > small {
-      color: $gray-100;
-      display: block;
-      font-size: .9rem;
-      margin-top: 5px;
-    }
-  }
+	// Small box hover state
+	&:hover {
+		text-decoration: none;
+		box-shadow: map-get($elevations, 2);
 
-  h3,
-  p {
-    z-index: 5;
-  }
-
-  // the icon
-  .icon {
-    color: rgba($black, .15);
-    z-index: 0;
-
-    > i {
-      font-size: 90px;
-      position: absolute;
-      right: 15px;
-      top: 15px;
-      transition: transform $transition-speed linear;
-
-      &.fa,
-      &.fas,
-      &.far,
-      &.fab,
-      &.fal,
-      &.fad,
-      &.ion {
-        font-size: 70px;
-        top: 20px;
-      }
-    }
-
-    svg {
-      font-size: 70px;
-      position: absolute;
-      right: 15px;
-      top: 15px;
-      transition: transform $transition-speed linear;
-    }
-  }
-
-  // Small box hover state
-  &:hover {
-    text-decoration: none;
-
-    // Animate icons on small box hover
-    .icon {
-      > i {
-        &,
-        &.fa,
-        &.fas,
-        &.far,
-        &.fab,
-        &.fal,
-        &.fad,
-        &.ion {
-          transform: scale(1.1);
-        }
-      }
-      > svg {
-        transform: scale(1.1);
-      }
-    }
-  }
-}
-
-@include media-breakpoint-down(sm) {
-  // No need for icons on very small devices
-  .small-box {
-    text-align: center;
-
-    .icon {
-      display: none;
-    }
-
-    p {
-      font-size: 12px;
-    }
-  }
+		// Animate icons on small box hover
+		.icon {
+			> i,
+			> svg {
+				opacity: 1;
+			}
+		}
+	}
 }

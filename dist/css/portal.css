@@ -10731,6 +10731,8 @@ body:not(.layout-fixed).layout-navbar-fixed.text-sm .wrapper .main-sidebar .side
 
 .layout-navbar-fixed .wrapper .content-wrapper {
   margin-top: calc(3.5rem + 0px);
+  height: calc(100vh - calc(3.5rem + 0px) - calc(3.5rem + 1px));
+  overflow: auto;
 }
 
 .layout-navbar-fixed .wrapper .main-header.text-sm ~ .content-wrapper {
@@ -12029,6 +12031,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 .content-header h1 {
   font-size: 1.8rem;
   margin: 0;
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.75);
 }
 
 .text-sm .content-header h1 {
@@ -12053,6 +12056,19 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   right: 0;
   bottom: 0;
   box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.23);
+  overflow: hidden;
+}
+
+.content-header .overlay img {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  filter: brightness(75%);
 }
 
 .hold-transition .content-wrapper,
@@ -12089,6 +12105,11 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 
 .dark-mode .content-wrapper .content-header {
   color: #fff;
+}
+
+.section .section-header > span {
+  border: 0 solid #f3701d;
+  border-width: 1px 0 5px;
 }
 
 .main-header {
@@ -12371,7 +12392,13 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 
 .user-image {
   width: 2.5rem;
-  height: auto;
+  height: 2.5rem;
+}
+
+.navbar-brand img,
+.navbar-brand svg {
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .brand-link {
@@ -23023,19 +23050,20 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   border-radius: 0;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.125), 0 1px 3px rgba(0, 0, 0, 0.2);
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
   position: relative;
+  transition: box-shadow 0.3s linear;
 }
 
 .small-box > .inner {
-  padding: 10px;
+  padding: 1rem;
 }
 
 .small-box > .small-box-footer {
   background-color: rgba(0, 0, 0, 0.1);
   color: rgba(255, 255, 255, 0.8);
   display: block;
-  padding: 3px 0;
+  padding: 0.25rem 0;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -23048,37 +23076,12 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 }
 
 .small-box h3 {
-  font-size: 2.2rem;
+  font-size: 1rem;
   font-weight: 700;
-  margin: 0 0 10px;
-  padding: 0;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-@media (min-width: 992px) {
-  .col-xl-2 .small-box h3,
-  .col-lg-2 .small-box h3,
-  .col-md-2 .small-box h3 {
-    font-size: 1.6rem;
-  }
-  .col-xl-3 .small-box h3,
-  .col-lg-3 .small-box h3,
-  .col-md-3 .small-box h3 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .col-xl-2 .small-box h3,
-  .col-lg-2 .small-box h3,
-  .col-md-2 .small-box h3 {
-    font-size: 2.2rem;
-  }
-  .col-xl-3 .small-box h3,
-  .col-lg-3 .small-box h3,
-  .col-md-3 .small-box h3 {
-    font-size: 2.2rem;
-  }
 }
 
 .small-box p {
@@ -23088,13 +23091,19 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 .small-box p > small {
   color: #f8f9fa;
   display: block;
-  font-size: .9rem;
-  margin-top: 5px;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
 }
 
 .small-box h3,
 .small-box p {
+  position: relative;
   z-index: 5;
+  text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.5), -1px 1px 0 rgba(255, 255, 255, 0.5), 1px -1px 0 rgba(255, 255, 255, 0.5), 1px 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.small-box .stretched-link::after {
+  z-index: 6;
 }
 
 .small-box .icon {
@@ -23102,49 +23111,24 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   z-index: 0;
 }
 
-.small-box .icon > i {
-  font-size: 90px;
+.small-box .icon > i,
+.small-box .icon > svg {
+  font-size: 5rem;
   position: absolute;
-  right: 15px;
-  top: 15px;
-  transition: transform 0.3s linear;
-}
-
-.small-box .icon > i.fa, .small-box .icon > i.fas, .small-box .icon > i.far, .small-box .icon > i.fab, .small-box .icon > i.fal, .small-box .icon > i.fad, .small-box .icon > i.ion {
-  font-size: 70px;
-  top: 20px;
-}
-
-.small-box .icon svg {
-  font-size: 70px;
-  position: absolute;
-  right: 15px;
-  top: 15px;
-  transition: transform 0.3s linear;
+  right: 1rem;
+  top: 1rem;
+  opacity: 0.5;
+  transition: opacity 0.3s linear;
 }
 
 .small-box:hover {
   text-decoration: none;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.small-box:hover .icon > i, .small-box:hover .icon > i.fa, .small-box:hover .icon > i.fas, .small-box:hover .icon > i.far, .small-box:hover .icon > i.fab, .small-box:hover .icon > i.fal, .small-box:hover .icon > i.fad, .small-box:hover .icon > i.ion {
-  transform: scale(1.1);
-}
-
+.small-box:hover .icon > i,
 .small-box:hover .icon > svg {
-  transform: scale(1.1);
-}
-
-@media (max-width: 767.98px) {
-  .small-box {
-    text-align: center;
-  }
-  .small-box .icon {
-    display: none;
-  }
-  .small-box p {
-    font-size: 12px;
-  }
+  opacity: 1;
 }
 
 .info-box {
@@ -23154,9 +23138,14 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
   display: flex;
   margin-bottom: 1rem;
   min-height: 80px;
-  padding: .5rem;
+  padding: 0.5rem;
   position: relative;
   width: 100%;
+  transition: box-shadow 0.3s linear;
+}
+
+.info-box:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .info-box .progress {
@@ -23194,7 +23183,7 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 
 .info-box .info-box-number {
   display: block;
-  margin-top: .25rem;
+  margin-top: 0.25rem;
   font-weight: 700;
 }
 

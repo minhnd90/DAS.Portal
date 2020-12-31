@@ -182,5 +182,12 @@
 }
 .user-image {
 	width: 2.5rem;
-    height: auto;
+	height: 2.5rem;
+}
+.navbar-brand {
+	img,
+	svg {
+		width: 2.5rem;
+		height: 2.5rem;
+	}
 }

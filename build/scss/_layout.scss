@@ -151,6 +151,8 @@ body,
 
 		.content-wrapper {
 			margin-top: $main-header-height;
+			height: calc(100vh - #{$main-header-height} - #{$main-footer-height});
+			overflow: auto;
 		}
 
 		.main-header.text-sm ~ .content-wrapper {
@@ -618,6 +620,7 @@ body:not(.layout-fixed) {
 	h1 {
 		font-size: 1.8rem;
 		margin: 0;
+		text-shadow: 0 0 0.5rem rgba($black, 0.75);
 
 		.text-sm & {
 			font-size: 1.5rem;
@@ -641,6 +644,19 @@ body:not(.layout-fixed) {
 		right: 0;
 		bottom: 0;
 		box-shadow: inset 0 -3px 6px rgba($black, 0.23);
+		overflow: hidden;
+
+		img {
+			min-width: 100%;
+			min-height: 100%;
+			width: auto;
+			height: auto;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			filter: brightness(75%);
+		}
 	}
 }
 
@@ -677,6 +693,14 @@ body:not(.layout-fixed) {
 
 		.content-header {
 			color: $white;
+		}
+	}
+}
+.section {
+	.section-header {
+		> span {
+			border: 0 solid $orange;
+			border-width: 1px 0 5px;
 		}
 	}
 }
