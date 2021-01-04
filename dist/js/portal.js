@@ -1,6 +1,6 @@
 /*!
  * DAS Portal v1.0.0 ()
- * Copyright 2014-2020 MinhND <minhnd@fsivietnam.com.vn>
+ * Copyright 2014-2021 MinhND <minhnd@fsivietnam.com.vn>
  * License: Open source - MIT <https://opensource.org/licenses/MIT>
  */
 (function (global, factory) {
@@ -1726,7 +1726,7 @@
   const CLASS_NAME_IS_OPENING = 'sidebar-is-opening';
   const CLASS_NAME_CLOSED = 'sidebar-closed';
   const Default$7 = {
-    autoCollapseSize: 992,
+    autoCollapseSize: 1280,
     enableRemember: false,
     noTransitionAfterReload: true
   };

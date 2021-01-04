@@ -22927,19 +22927,19 @@ html.maximized-card {
   background-color: inherit !important;
 }
 
-[data-widget="expandable-table"] {
+[data-widget='expandable-table'] {
   cursor: pointer;
 }
 
-[data-widget="expandable-table"] i {
+[data-widget='expandable-table'] i {
   transition: transform 0.3s linear;
 }
 
-[data-widget="expandable-table"][aria-expanded="true"] td > i[class*="right"] {
+[data-widget='expandable-table'][aria-expanded='true'] td > i[class*='right'] {
   transform: rotate(90deg);
 }
 
-[data-widget="expandable-table"][aria-expanded="true"] td > i[class*="left"] {
+[data-widget='expandable-table'][aria-expanded='true'] td > i[class*='left'] {
   transform: rotate(-90deg);
 }
 
@@ -22986,6 +22986,14 @@ html.maximized-card {
 
 .dark-mode .table.table-head-fixed thead tr:nth-child(1) th {
   background-color: #3f474e;
+}
+
+.col-min {
+  width: 1%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: unset !important;
 }
 
 .carousel-control-prev .carousel-control-custom-icon {
