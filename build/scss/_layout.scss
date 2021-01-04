@@ -654,7 +654,7 @@ body:not(.layout-fixed) {
 			left: 50%;
 			top: 50%;
 			transform: translate(-50%, -50%);
-			filter: brightness(75%);
+			filter: brightness(calc(100% / 3 * 2));
 		}
 	}
 }
