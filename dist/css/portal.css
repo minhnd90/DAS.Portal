@@ -12184,8 +12184,8 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
   font-weight: 300;
   padding: 2px 4px;
   position: absolute;
-  right: 5px;
-  top: 9px;
+  right: -0.5rem;
+  top: 0.5rem;
 }
 
 .btn-navbar {
@@ -22994,6 +22994,18 @@ html.maximized-card {
   overflow: hidden;
   text-overflow: ellipsis;
   min-width: unset !important;
+}
+
+.col-100 {
+  min-width: 100px !important;
+}
+
+.col-200 {
+  min-width: 200px !important;
+}
+
+.col-300 {
+  min-width: 300px !important;
 }
 
 .carousel-control-prev .carousel-control-custom-icon {
