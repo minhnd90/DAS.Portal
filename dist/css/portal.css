@@ -12396,7 +12396,7 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 
 .navbar-brand img,
 .navbar-brand svg {
-  width: 2.5rem;
+  width: auto;
   height: 2.5rem;
 }
 
