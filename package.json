@@ -98,7 +98,7 @@
     "@types/jquery": "^3.5.4",
     "autoprefixer": "^9.8.6",
     "browser-sync": "^2.29.3",
-    "bundlewatch": "^0.2.7",
+    "bundlewatch": "^0.4.0",
     "clean-css-cli": "^4.3.0",
     "eslint": "^7.10.0",
     "eslint-config-xo": "^0.32.1",
